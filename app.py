@@ -102,7 +102,7 @@ async def on_start(c,m):
          try: await c.send_message(admin, text, reply_markup=InlineKeyboardMarkup ([[InlineKeyboardButton (m.from_user.first_name,user_id=m.from_user.id)]]))
 
 
-except: pass
+   except: pass
    data = {"name":m.from_user.first_name[:25], "username":m.from_user.username, "mention":m.from_user.mention(m.from_user.first_name[:25]),"id":m.from_user.id}
    botdb.set(f"USER:{m.from_user.id}",data)
 
