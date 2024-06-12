@@ -184,7 +184,6 @@ async def on_messages(c,m):
           botdb.set("db"+token.split(":")[0],data)
           return await m.reply(text,quote=True)
 
-𝘼𝙉𝙂𝙇𝙀, [13/06/2024 01:32 ص]
 if m.text and botdb.get(f"unban:{m.from_user.id}") and (m.from_user.id == ownerID or m.from_user.id in botdb.get("db"+token.split(":")[0])["admins"]):
       botdb.delete(f"broad:{m.from_user.id}")
       botdb.delete(f"whois:{m.from_user.id}")
@@ -332,7 +331,6 @@ async def on_Callback(c,m):
       botdb.delete(f"add:{m.from_user.id}")
       botdb.delete(f"unban:{m.from_user.id}")
 
-𝘼𝙉𝙂𝙇𝙀, [13/06/2024 01:32 ص]
 if m.data == "back" and (m.from_user.id == ownerID or m.from_user.id in botdb.get("db"+token.split(":")[0])["admins"]):
       #await m.answer("• تم الرجوع بنجاح والغاء كل شي ",show_alert=True)
       await m.edit_message_text(f"• أهلاً بك ⌯ {m.from_user.mention}\n• إليك لوحة تحكم الادمن",reply_markup=STARTKEY)
